@@ -14,18 +14,16 @@
         <div>
           <h1>{{ post['title'] }}</h1>
           <div class="about">by {{ post['username'] }} on {{ post['created'].strftime('%Y-%m-%d') }}</div>
-          <h2>{{ post['substance'] }}</h2>
-          <h3>{{ post['dosage'] }}</h3>
-          <h4>{{ post['duration'] }}</h4>
+	  <h2>substance: {{ post['substance'] }} - dosage:  {{ post['dosage'] }} - duration: {{ post['duration'] }}</h2>
         </div>
         {% if g.user['id'] == post['author_id'] %}
           <a class="action" href="{{ url_for('blog.update', id=post['id']) }}">Edit</a>
         {% endif %}
       </header>
-      <p class="body">{{ post['locations'] }}<p>
-      <p class="body">{{ post['activities'] }}<p>
-      <p class="body">{{ post['realizations'] }}<p>
-      <p class="body">{{ post['notes'] }}<p>
+      <p class="body"> Location: {{ post['locations'] }}<p>
+      <p class="body"> Activities: {{ post['activities'] }}<p>
+      <p class="body"> Realizations: {{ post['realizations'] }}<p>
+      <p class="body"> Notes: {{ post['notes'] }}<p>
     </article>
     {% if not loop.last %}
       <hr>

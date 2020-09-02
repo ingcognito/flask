@@ -7,10 +7,21 @@
 {% block content %}
   <form method="post">
     <label for="title">Title</label>
-    <input name="title" id="title"
-      value="{{ request.form['title'] or post['title'] }}" required>
-    <label for="body">Body</label>
-    <textarea name="body" id="body">{{ request.form['body'] or post['body'] }}</textarea>
+    <input name="title" id="title" value="{{ request.form['title'] or post['title'] }}" required>
+    <label for="substance">Substance</label>
+    <textarea name="substance" id="substance">{{ request.form['substance'] or post['substance'] }}</textarea>
+    <label for="dosage">Dosage</label>
+    <textarea name="dosage" id="dosage">{{ request.form['dosage'] or post['dosage'] }}</textarea>
+    <label for="duration">Duration</label>
+    <textarea name="duration" id="duration">{{ request.form['duration'] or post['duration'] }}</textarea>
+    <label for="locations">Locations</label>
+    <textarea name="locations" id="locations">{{ request.form['locations'] or post['locations'] }}</textarea>
+    <label for="activities">Activities</label>
+    <textarea name="activities" id="activities">{{ request.form['activities'] or post['activities'] }}</textarea>
+    <label for="realizations">Realizations</label>
+    <textarea name="realizations" id="realizations">{{ request.form['realizations'] or post['realizations'] }}</textarea>
+    <label for="notes">Notes</label>
+    <textarea name="notes" id="notes">{{ request.form['notes'] or post['notes'] }}</textarea>
     <input type="submit" value="Save">
   </form>
   <hr>

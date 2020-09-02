@@ -50,7 +50,7 @@ def create():
 
 def get_post(id, check_author=True):
     post = get_db().execute(
-        'SELECT p.id, title, notes, created, author_id, username'
+        'SELECT p.id, title, substance, dosage, duration, locations, activities, realizations, notes, created, author_id, username'
         ' FROM post p JOIN user u ON p.author_id = u.id'
         ' WHERE p.id = ?',
         (id,)
@@ -71,6 +71,12 @@ def update(id):
 
     if request.method == 'POST':
         title = request.form['title']
+        substance = request.form['substance']
+        dosage = request.form['dosage']
+        duration = request.form['duration']
+        locations = request.form['locations']
+        activities = request.form['activities']
+        realizations = request.form['realizations']
         notes = request.form['notes']
         error = None
 
@@ -82,9 +88,9 @@ def update(id):
         else:
             db = get_db()
             db.execute(
-                'UPDATE post SET title = ?, body = ?'
+                'UPDATE post SET title = ?, substance = ?, dosage = ?, duration = ?, locations = ?, activities = ?, realizations = ?, notes = ?'
                 ' WHERE id = ?',
-                (title, body, id)
+                (title, substance, dosage, duration, locations, activities, realizations, notes, id)
             )
             db.commit()
             return redirect(url_for('blog.index'))
