@@ -11,3 +11,5 @@ help:
 develop:
 	flask run
 	
+init-db:
+	flask init-db
