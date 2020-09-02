@@ -12,6 +12,12 @@ CREATE TABLE post (
   author_id INTEGER NOT NULL,
   created TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   title TEXT NOT NULL,
-  body TEXT NOT NULL,
+  substance TEXT NOT NULL,
+  dosage TEXT NOT NULL,
+  duration TEXT NOT NULL,
+  locations TEXT NOT NULL,
+  activities TEXT NOT NULL,
+  realizations TEXT NOT NULL,
+  notes TEXT NOT NULL,
   FOREIGN KEY (author_id) REFERENCES user (id)
 );

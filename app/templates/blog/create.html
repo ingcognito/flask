@@ -8,8 +8,20 @@
   <form method="post">
     <label for="title">Title</label>
     <input name="title" id="title" value="{{ request.form['title'] }}" required>
-    <label for="body">Body</label>
-    <textarea name="body" id="body">{{ request.form['body'] }}</textarea>
+    <label for="substance">Substance</label>
+    <textarea name="substance" id="substance">{{ request.form['substance'] }}</textarea>
+    <label for="dosage">Dosage</label>
+    <textarea name="dosage" id="dosage">{{ request.form['dosage'] }}</textarea>
+    <label for="duration">duration</label>
+    <textarea name="duration" id="duration">{{ request.form['duration'] }}</textarea>
+    <label for="locations">locations</label>
+    <textarea name="locations" id="locations">{{ request.form['locations'] }}</textarea>
+    <label for="activities">activities</label>
+    <textarea name="activities" id="activities">{{ request.form['activities'] }}</textarea>
+    <label for="realizations">realizations</label>
+    <textarea name="realizations" id="realizations">{{ request.form['realizations'] }}</textarea>
+    <label for="notes">notes</label>
+    <textarea name="notes" id="notes">{{ request.form['notes'] }}</textarea>
     <input type="submit" value="Save">
   </form>
 {% endblock %}
