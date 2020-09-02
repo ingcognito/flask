@@ -1,6 +1,6 @@
 SHELL := /bin/bash -e
 
-export FLASK_APP=hello.py
+export FLASK_APP=app
 export FLASK_ENV=development
 
 .PHONY: help
