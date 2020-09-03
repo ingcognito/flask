@@ -3,7 +3,7 @@
 {% block header %}
   <h1>{% block title %}Experiences ✨{% endblock %}</h1>
   {% if g.user %}
-    <a class="action" href="{{ url_for('blog.create') }}">New</a>
+  <h4><a class="action" href="{{ url_for('blog.create') }}">New Post ✍</a></h4>
   {% endif %}
 {% endblock %}
 
@@ -17,7 +17,7 @@
 	  <h2>substance: {{ post['substance'] }} - dosage:  {{ post['dosage'] }} - duration: {{ post['duration'] }}</h2>
         </div>
         {% if g.user['id'] == post['author_id'] %}
-          <a class="action" href="{{ url_for('blog.update', id=post['id']) }}">Edit</a>
+	<h4><a class="action" href="{{ url_for('blog.update', id=post['id']) }}">Edit</a></h4>
         {% endif %}
       </header>
       <p class="body"> Location: {{ post['locations'] }}<p>

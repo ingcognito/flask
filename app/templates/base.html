@@ -5,11 +5,11 @@
   <h1>Super Magic Diary 💫</h1>
   <ul>
     {% if g.user %}
-      <li><span>{{ g.user['username'] }}</span>
-      <li><a href="{{ url_for('auth.logout') }}">Log Out</a>
+      	<li><span><h3>{{ g.user['username'] }}</h3></span>
+	<li><h3><a href="{{ url_for('auth.logout') }}">Log Out ❌</h3></a>
     {% else %}
-      <li><a href="{{ url_for('auth.register') }}">Register</a>
-      <li><a href="{{ url_for('auth.login') }}">Log In</a>
+    	<li><h3><a href="{{ url_for('auth.register') }}">Register 📋</h3></a>
+	<li><h3><a href="{{ url_for('auth.login') }}">Log In ✅</h3></a>
     {% endif %}
   </ul>
 </nav>
