@@ -1,6 +1,7 @@
+@import url(https://fonts.googleapis.com/css?family=Orbitron);
 html { font-family: sans-serif; background: #eee; padding: 1rem; background-image: url("https://github.com/ingcognito/supermagicdiary/blob/master/app/static/smd.png?raw=true"); background-repeat: repeat; background-size: 600px 600px;}
 body { max-width: 960px; margin: 0 auto; background: white;}
-h1 { font-family: sans-serif; color: #377ba8; margin: 1rem 0; }
+h1 { font-family: Orbitron; color: #377ba8; margin: 1rem 0; }
 a { color: #377ba8; }
 hr { border: none; border-top: 1px solid lightgray; }
 nav { background: lightgray; display: flex; align-items: center; padding: 0 0.5rem; }
